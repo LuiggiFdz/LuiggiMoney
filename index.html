@@ -2,10 +2,11 @@
   <head>
     <title> Luiggi's Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <style>
       body, html{
         margin: 0px;
-        background-color: rgba(0,0,0,0);
+        background: linear-gradient(to right, red , orange, yellow);
       }
       header {
         width: cover;
@@ -25,10 +26,48 @@
       }
       h1 {
         text-align: center;
+        font-family: 'Cinzel', serif;
+        text-shadow: 2px 2px white;
       }
       h2 {
         text-align: center;
+        font-family: 'Cinzel', serif;
+        text-shadow: 2px 2px white;
       }
+      ul {
+        margin: 0;
+        padding: 10px;
+        background: rgba(0,0,0,0.6);
+      }
+      li {
+        font-size: 25px;
+        display: inline;
+        padding: 0px 20px 0px 20px;
+        text-align: center;
+        font-family: 'Cinzel', serif;
+       }
+       a {
+         text-decoration: none;
+         color: white;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+       }
+       a:hover {
+         text-decoration: underline;
+         color: darkred;
+       }
+       .content {
+         padding: 10px;
+       }
+       .sticky {
+         position: fixed;
+         top: 0;
+         width: 100%
+       }
+       .sticky + .content {
+         padding-top: 102px;
+       }
       #pagename {
         margin-top: 0;
         color: white;
@@ -44,9 +83,26 @@
       <img src="Images/LuiggiFdz.jpg" height="200px" width="200px" alt="Luiggi Fernández" id="profile">
       <p id="pagename">Luiggi's Blog</p>
     </header>
-    <h1>Hello World!</h1>
-    <h2>Hello 100 Days of Code!</h2>
+    <div class="scroll" id="myScroll">
+      <ul>
+        <li><a href="#header" target="_self">Inicio</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>Hello World!</h1>
+      <h2>Hello 100 Days of Code!</h2>
+    </div>
   </body>
   <script>
+    window.onscroll = function() {myFunction()};
+    var header = document.getElementById("myScroll");
+    var sticky = header.offsetTop;
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
   </script>
 </html>
