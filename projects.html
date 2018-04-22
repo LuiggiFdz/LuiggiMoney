@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Luiggi's Blog - About</title>
+    <title>Luiggi's Blog - Projects</title>
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,8 +21,17 @@
         background-repeat: no-repeat;
         background-image: url("Images/CodeHeader.png");
       }
+      footer {
+        width: cover;
+        margin: auto;
+        height: 150px;
+        background-color: rgba(255,255,255,0.5);
+        display: block;
+        position: static;
+      }
       h2 {
         font-family: 'Gravitas One', cursive;
+        text-shadow: 2px 2px white;
       }
       ul {
         margin: 0;
@@ -74,10 +83,31 @@
         width: 23%;
         margin: auto;
       }
-      /* Fake image */
-      .fakeimg {
-        background-color: #aaa;
+      .posts {
+        background-color: #cc0099;
         width: 100%;
+        font-size: 15px;
+        text-decoration: none;
+        text-align: left;
+        display: block;
+        padding: 10px;
+      }
+      .posts:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+      .post_img {
+        background-color: #cc0099;
+        width: 100%;
+        display: block;
+      }
+      .post_img:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+      .top_posts {
+        color: white;
+        text-shadow: 2px 2px black;
       }
       /* Add a card effect for articles */
       .card {
@@ -144,27 +174,27 @@
     <div class="content">
       <div class="row">
         <div class="leftcolumn">
-          <a class="card" href="post1.html" target="_blank">
+          <a class="card" href="post1.html" target="_blank" id="JavaScript_post1">
             <h2>JavaScript</h2>
             <h4>JavaScript course in Udacity; learning the basic syntax of this programming language.<br> April 20, 2018</h4>
-            <img src="Images/JS.png" id="post1" class="fakeimg" style="height:500px;">
+            <img src="Images/JS.png" id="post1" class="post_img" style="height:500px;">
             <p>Some text..</p>
           </a>
-          <!--
-          <a class="card" href="#" target="_blank">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
+          <a class="card" href="post2.html" target="_blank" id="CodinGame_post2">
+            <h2>CodinGame</h2>
+            <h4>Signed Up in the CodinGame platform. A challenge game based platform to learn to code and compete online.<br> April 22, 2018</h4>
+            <img src="Images/CG.png" id="post2" class="post_img" style="height:500px;">
             <p>Some text..</p>
           </a>
-        -->
         </div>
         <div class="rightcolumn">
           <div class="card">
             <h2>Popular Posts</h2>
-            <div class="fakeimg">#</div><br>
-            <div class="fakeimg">#</div><br>
-            <div class="fakeimg">#</div>
+            <div class="top_posts">
+              <a class="posts" href="#JavaScript_post1">JavaScript</a><br>
+              <a class="posts" href="#CodinGame_post2">CodinGame</a><br>
+              <div class="posts">#</div>
+            </div>
           </div>
           <div class="card" id="follow">
             <h2>Follow Me!</h2>
@@ -174,7 +204,10 @@
           </div>
         </div>
       </div>
+      <br>
     </div>
+    <footer id="footer">
+    </footer>
   </body>
   <script>
     window.onscroll = function() {myFunction()};
