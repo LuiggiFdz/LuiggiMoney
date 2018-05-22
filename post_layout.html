@@ -13,7 +13,7 @@
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
-        background-image: url("Images/CodeHeader.png");
+        background-image: url("Images/PostHeader.png");
       }
       footer {
         width: cover;
@@ -47,6 +47,12 @@
         text-decoration: underline;
         color: darkred;
       }
+      .logo {
+        float: right;
+        margin: -10px;
+        margin-right: 3px;
+        height: 50px;
+      }
       .content {
         padding: 10px;
       }
@@ -58,7 +64,32 @@
       .sticky + .content {
         padding-top: 102px;
       }
-
+      .column {
+        width: 75%;
+        margin: auto;
+      }
+      .card {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        margin-top: 20px;
+        display: block;
+        color: black;
+        text-align: left;
+        font-family: 'Berkshire Swash', cursive;
+      }
+      .card:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+      @media screen and (max-width: 800px) {
+        .column {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      #footer {
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
@@ -69,9 +100,14 @@
         <li><a href="index.html" target="_self">Home</a></li>
         <li><a href="about.html" target="_self">About Me</a></li>
         <li><a href="projects.html" target="_self">Projects</a></li>
+        <li><img src="Images/Logo.png" class="logo"></li>
       </ul>
     </div>
     <div class="content">
+      <div class="column">
+        <div class="card">
+        </div>
+      </div>
     </div>
     <footer id="footer">
     </footer>
