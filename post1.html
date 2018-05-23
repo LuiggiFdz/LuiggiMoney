@@ -65,7 +65,32 @@
     .sticky + .content {
       padding-top: 102px;
     }
-
+    .column {
+      width: 75%;
+      margin: auto;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      margin-top: 20px;
+      display: block;
+      color: black;
+      text-align: center;
+      font-family: 'Berkshire Swash', cursive;
+    }
+    .card:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+    @media screen and (max-width: 800px) {
+      .column {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    #footer {
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -80,6 +105,10 @@
     </ul>
   </div>
   <div class="content">
+    <div class="column">
+      <div class="card">
+      </div>
+    </div>
   </div>
   <footer id="footer">
   </footer>
